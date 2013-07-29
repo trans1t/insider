@@ -10,7 +10,7 @@ var express = require('express'),
 /* the following API is standard REST, no description necessary really */
 // sets api - an individual 'performance'
 app.get('/sets',function(req,res) {
-  
+    
 });
 app.get('/sets/:id',function(req,res) {
 
@@ -38,5 +38,6 @@ app.post('/shows',function(req,res) {
 
 // fire up the server
 app.listen(3000, function() {
+  mongoose.connect('mongodb://localhost/insider');
   console.log("Listening on 30000");
 }
