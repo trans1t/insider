@@ -9,4 +9,4 @@ a music community webapp with timetabling running on backbone with a mongo/expre
 4. ````node server````
 
 ## recompiling assets
-i'm using stylus for css - if you make changes, you can compile them with something i'm going to write eventually here.
+i'm using stylus for css, to compile for now just run ````stylus site/css```` from the main directory 
