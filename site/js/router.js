@@ -18,7 +18,6 @@ define([
       var statusView = new StatusView({model: status}).render();
 
       console.log("binding");
-      socket = io.connect('http://localhost:3000');
       socket.on('status',function(data) {
         status.set(data);
       });

@@ -1,4 +1,4 @@
-define(['socketio'],function(io){
-  var socket = io.connect('http://localhost:3000');
+define(['socketio','config'],function(io,config){
+  var socket = io.connect(config.server_address);
   return socket; 
 });
