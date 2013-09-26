@@ -11,7 +11,7 @@ requirejs.config({
     json2: 'lib/json2',
     i18nprecompile: 'lib/i18nprecompile',
     hbs: 'lib/hbs',
-    Handlebars: 'lib/Handlebars',
+    Handlebars: 'lib/handlebars',
     backstretch: 'lib/jquery.backstretch.min'
   },
   shim: {
