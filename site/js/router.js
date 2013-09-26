@@ -1,13 +1,36 @@
-var app = app || {};
-var Router = Backbone.Router.extend({
-  routes: {
-    'test': 'doSomething'
-  },
+define([
+         'backbone',
+         'socket',
+         'models/status',
+         'views/status',
+         'views/admin',
+       ], function(Backbone,socket,Status,StatusView,AdminView) {
 
-  doSomething: function(param) {
-    //do something with the param
-  }
+  return Backbone.Router.extend({
+
+    routes: {
+      '': 'home',
+      'admin': 'admin'
+    },
+
+    home: function() {
+      var status = new Status();
+      var statusView = new StatusView({model: status}).render();
+
+      console.log("binding");
+      socket = io.connect('http://localhost:3000');
+      socket.on('status',function(data) {
+        status.set(data);
+      });
+      socket.emit('status');
+    },
+
+    admin: function() {
+      var status = new Status();
+      var adminView = new AdminView({model: status}).render();
+    }
+
+
+  });
+
 });
-
-app.ShowRouter = new Router;
-Backbone.history.start();

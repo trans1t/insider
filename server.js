@@ -5,17 +5,46 @@
  */
 
 var express = require('express'),
-    app = express(),
+    app = express().listen(3000),
+    io = require('socket.io').listen(app);
+
+    /*
     path = require('path'),
     mongoose = require('mongoose').connect('mongodb://localhost/insider'),
     application_root = __dirname;
+    */
 
+/*
 app.configure( function() {
   app.use(express.static(path.join(application_root,'site')));
   app.use(express.bodyParser()); //POST SUPPORT
   app.use(express.methodOverride()); //PUT SUPPORT
 });
+*/
 
+// fire up the server
+    //
+app.listen(3000, function() {
+  console.log("Listening on 3000");
+});
+
+var status = {
+  one: "OK",
+  two: "",
+  live: false
+};
+
+io.sockets.on('connection', function (socket) {
+  socket.on('status', function() {
+    socket.emit('status',status);
+  });
+  socket.on('status_update', function(data) {
+    status = data;
+    io.sockets.emit('status',status);
+  });
+});
+
+/*
 var db = mongoose.connection,
     Show;
 db.on('error',console.error.bind(console,'conn error'));
@@ -29,7 +58,7 @@ db.once('open', function callback() {
 });
 
 
-/* the following API is a standard restful one */
+//the following API is a standard restful one
 app.get('/shows',function(req,res) {
   Show.find(function(err,shows) {
     res.send(shows);
@@ -75,8 +104,5 @@ app.post('/shows',function(req,res) {
   });
 });
 
+*/
 
-// fire up the server
-app.listen(3000, function() {
-  console.log("Listening on 30000");
-});

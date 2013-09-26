@@ -3,60 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>insiderfm</title>
+    <script type="text/javascript" src="js/lib/require.js" data-main="js/main.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
 
-    <!--
-    <header>
-      <nav>
-        <div id="logo">insider<span id="logo-colored">fm</span></div>
-        <ul>
-          <li>shows</li>
-        </ul>
-      </nav>
-    </header>
-    -->
-
     <section id="main">
-      <div id="content">
-        <h3 id="status">we're live now.</h3> 
-        <h4 id="now-playing">TRANSIENT is in the mix.</h4>
-        <a id="play-control" href="http://185.21.216.148:8000/live.m3u" class="entypo">&#9654</a>
-      </div>
+      <div id="content"></div>
     </section>
 
     <footer>
-    <div id="logo">insider.fm</div>
+      <div id="logo">insider.fm</div>
     </footer>
-
-    <script type="text/template" id="set-template">
-      <div class="set">
-        <div class="time">{{time}}</div>
-        <div class="artist">{{artist}}</div>
-      </div>
-    </script>
-    <script type="text/template" id="show-template">
-      <section id="show">
-        <div class="title">{{title}}</div>
-        {{sets}}
-      </section>
-    </script>
-    <script src="js/lib/jquery-min.js"></script>
-    <script src="js/lib/underscore-min.js"></script>
-    <script src="js/lib/handlebars.js"></script>
-    <script src="js/lib/backbone-min.js"></script>
-    <script src="js/models/show.js"></script>
-    <script src="js/models/set.js"></script>
-    <script src="js/coll/shows.js"></script>
-    <script src="js/coll/sets.js"></script>
-    <script src="js/views/show.js"></script>
-    <script src="js/views/set.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/app.js"></script>
 
     <script type="text/javascript" src="http://use.typekit.net/wde8jvl.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    <script type="text/javascript" src="js/lib/jquery.backstretch.min.js"></script>
 </html>
