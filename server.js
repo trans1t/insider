@@ -1,5 +1,5 @@
 /*
- * here's the express server which runs the restful api, communicating with 
+ * here's the express server which runs the api, communicating with 
  * mongodb to make things permanent
  *
  */
@@ -31,7 +31,8 @@ app.listen(3000, function() {
 var status = {
   one: "OK",
   two: "",
-  live: false
+  live: false,
+  stream: ''
 };
 
 io.sockets.on('connection', function (socket) {
@@ -58,7 +59,7 @@ db.once('open', function callback() {
 });
 
 
-//the following API is a standard restful one
+//here's the api
 app.get('/shows',function(req,res) {
   Show.find(function(err,shows) {
     res.send(shows);

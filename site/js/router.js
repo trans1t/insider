@@ -29,7 +29,6 @@ define([
       var adminView = new AdminView({model: status}).render();
     }
 
-
   });
 
 });

@@ -1,9 +1,15 @@
-define(['marionette','hbs!tpl/admin'],function(Marionette,tpl) {
+define([
+         'marionette',
+         'app',
+         'hbs!tpl/admin'
+       ], function(Marionette,app,tpl) {
+
   return Marionette.ItemView.extend({
     el: '#content',
     template: tpl,
     events: {
-      "click button": "statusUpdate"
+      "click button#submit": "statusUpdate",
+      "click button.back": "back"
     },
     statusUpdate: function(e) {
       e.preventDefault();
@@ -11,13 +17,14 @@ define(['marionette','hbs!tpl/admin'],function(Marionette,tpl) {
         one: $('#one').val(),
         two: $('#two').val(),
         live: $('#live').is(':checked'),
+        stream: $('#stream').val()
       }
-      console.log(vals);
       this.model.set(vals);
       this.model.pushToServer();
-
-      $('#form-status').html('Submitted').fadeOut(1000);
-
+      $('#form-status').show().html('Submitted').fadeOut(1000);
+    },
+    back: function(e) {
+      app.router.navigate('');
     }
   });
 });

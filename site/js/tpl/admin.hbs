@@ -1,15 +1,18 @@
 <div class="admin">
-<h1> hi dima </h1>
+<h1> hello admin </h1>
 <form>
   <fieldset>
     <input type="text" id="one" placeholder="Current status message"><br>
-    <input type="text" id="two" placeholder="Who's playing now?"><br>
+    <input type="text" id="two" placeholder="Now playing?"><br>
     <label class="checbox">
       Live?
       <input id="live" type="checkbox"></input>
     </label>
     <br>
-    <button type="submit" class="btn">Update</button>
+    <input type="text" id="stream" placeholder="Stream URL"><br>
+    <br>
+    <button id="submit" type="submit" class="btn">Update</button>
+    <button class="btn back">Back</button>
     <span id="form-status" class="help-block"></span>
   </fieldset>
 </form>

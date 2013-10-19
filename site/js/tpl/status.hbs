@@ -1,5 +1,8 @@
 <h1 id="status">{{one}}</h3> 
 <h2 id="now-playing">{{two}}</h4>
 {{#if live}}
-<a id="play-control" class="btn" href="http://185.21.216.148:8000/live.m3u" class="entypo">&#9654</a>
+<audio src="{{stream}}">
+  <a href="{{stream}}.m3u">Click here for stream, old browser user.</a>  
+</audio>
+<div id="play-control" class="btn" class="entypo">&#9654;</div>
 {{/if}}
