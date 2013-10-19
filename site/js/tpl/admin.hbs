@@ -2,14 +2,14 @@
 <h1> hello admin </h1>
 <form>
   <fieldset>
-    <input type="text" id="one" placeholder="Current status message"><br>
-    <input type="text" id="two" placeholder="Now playing?"><br>
+    <input type="text" id="one" placeholder="Current status message" value="{{one}}"><br>
+    <input type="text" id="two" placeholder="Now playing?" value="{{two}}"><br>
     <label class="checbox">
       Live?
-      <input id="live" type="checkbox"></input>
+      <input id="live" type="checkbox" {{#if live}}checked{{/if}}></input>
     </label>
     <br>
-    <input type="text" id="stream" placeholder="Stream URL"><br>
+    <input type="text" id="stream" placeholder="Stream URL" value="{{stream}}"><br>
     <br>
     <button id="submit" type="submit" class="btn">Update</button>
     <button class="btn back">Back</button>
