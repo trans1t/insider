@@ -69,6 +69,44 @@ footer #links a {
   padding: 15px;
 }
 
+#chat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+}
+
+#messages dl {
+  height: 200px;
+  width: 80%;
+  overflow: scroll;
+}
+
+#messages input {
+  border-radius: 0;
+  background-color: rgba(0,0,0,0);
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
+#chat .messages {
+  position: relative;
+}
+
+#chat .enable {
+  position: absolute;
+  bottom: 0;
+}
+
+#chat input {
+  position: absolute;
+  top: 0;
+}
+
 @font-face {
   font-family: 'EntypoRegular';
   src: url("font/entypo.eot");
@@ -76,6 +114,7 @@ footer #links a {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'EntypoSocial';
   src: url("font/entypo-social.eot");
@@ -83,6 +122,7 @@ footer #links a {
   font-weight: normal;
   font-style: normal;
 }
+
 .entypo {
   font-family: 'EntypoRegular','EntypoSocial';
   font-weight: normal;
