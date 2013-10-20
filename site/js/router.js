@@ -41,10 +41,10 @@ define([
         messagesView.render();
       });
       socket.on('messages',function(data) {
-        console.log(data);
         _.each(data, function(item) {
-          messages.unshift(new Message(item));
+          messages.add(new Message(item));
         });
+        console.log(messages);
       });
       socket.emit('messages');
     },

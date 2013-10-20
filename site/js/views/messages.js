@@ -20,17 +20,13 @@ define(['marionette','views/message','hbs!tpl/messages','app','socket'],
     },
     nickname: function(e) {
       if (e.keyCode == 13) {
-        console.log("enter");
         app.nickname = $('#nickname').val();
-        $('#nickname').hide();
-        $('#nickname').remove();
-        $('#chatbox').show();
-        $('#chatbox').focus();
+        $('#nickname').hide().remove();
+        $('#chatbox').show().focus();
       }
     },
     chat: function(e) {
       if (e.keyCode == 13) {
-        console.log(app.nickname);
         var message = $('#chatbox').val();
         $('#chatbox').val('');
         socket.emit('message',{
