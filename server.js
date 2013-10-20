@@ -21,7 +21,7 @@ var status = {
   stream: ''
 };
 
-//stores the latest 10 chat messages
+//stores the latest X chat messages
 var messages = [];
 
 io.sockets.on('connection', function (socket) {
@@ -49,6 +49,6 @@ io.sockets.on('connection', function (socket) {
 
 function storeMessage(msg) {
   messages.unshift(msg);
-  if (messages.length > 10)
+  if (messages.length > 30)
     messages.splice(messages.length-1,1);
 }
