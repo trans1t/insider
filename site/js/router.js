@@ -53,6 +53,8 @@ define([
       var status = new Status();
       var adminView = new AdminView({model: status}).render();
 
+      console.log("ADMIN");
+
       socket.on('status',function(data) {
         status.set(data);
       });

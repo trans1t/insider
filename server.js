@@ -22,18 +22,7 @@ var status = {
 };
 
 //stores the latest 10 chat messages
-var messages = [
-  {
-    author: "Joe",
-    message: "Derpy derp",
-    time: "1pm"
-  },
-  {
-    author:"Fred",
-    message: "Herpy derr",
-    time: "2pm"
-  }
-];
+var messages = [];
 
 io.sockets.on('connection', function (socket) {
 
