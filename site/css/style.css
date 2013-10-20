@@ -12,11 +12,23 @@ a:active {
   text-decoration: none;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+footer #foot {
+  position: relative;
+  height: 100px;
+}
+
 footer #logo {
   position: absolute;
   text-align: center;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   font-size: 14pt;
 }
 
@@ -26,6 +38,7 @@ footer #links {
   width: 100%;
   bottom: 0;
   font-size: 14pt;
+  overflow: hidden;
 }
 footer #links a {
   padding-left: 10px;
@@ -75,12 +88,16 @@ footer #links a {
   left: 0;
   bottom: 0;
   width: 20%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.4);
   padding: 10px;
 }
 
+#messages {
+  height: 95%;
+}
+
 #messages dl {
-  height: 200px;
+  height: 100%;
   width: 80%;
   overflow: scroll;
 }
@@ -100,12 +117,20 @@ footer #links a {
 #chat .enable {
   position: absolute;
   bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 #chat input {
   position: absolute;
   top: 0;
 }
+
+#chat dt,#chat dd {
+  display: inline;
+  padding-right: 1px;
+}
+
 
 @font-face {
   font-family: 'EntypoRegular';
@@ -127,4 +152,6 @@ footer #links a {
   font-family: 'EntypoRegular','EntypoSocial';
   font-weight: normal;
   font-size: 200%;
+  line-height: 50%;
+  padding-right: 50px;
 }

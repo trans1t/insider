@@ -7,11 +7,16 @@ define(['marionette','views/message','hbs!tpl/messages','app','socket'],
     template: tpl,
     events: {
       'keydown #nickname': 'nickname',
-      'keydown #chatbox': 'chat'
+      'keydown #chatbox': 'chat',
+      'click .enable': 'hide'
     },
     onRender: function(e) {
-      if(app.nickname)
+      if(app.nickname) {
         $('#nickname').remove();
+        $('#chatbox').focus();
+      } else {
+        $('#nickname').focus();
+      }
     },
     nickname: function(e) {
       if (e.keyCode == 13) {
@@ -20,6 +25,7 @@ define(['marionette','views/message','hbs!tpl/messages','app','socket'],
         $('#nickname').hide();
         $('#nickname').remove();
         $('#chatbox').show();
+        $('#chatbox').focus();
       }
     },
     chat: function(e) {
@@ -33,6 +39,16 @@ define(['marionette','views/message','hbs!tpl/messages','app','socket'],
           time: "today"
         });
       }
+    },
+    hide: function(e) {
+      console.log($('#messages').is(':visible'));
+      if ($('#messages').is(':visible'))
+        $('.enable').html('show chat')
+      else 
+        $('.enable').html('hide chat')
+
+      $('#messages').animate({width:'toggle'}); 
     }
+
   });
 });
