@@ -87,4 +87,6 @@ footer #links a {
   font-family: 'EntypoRegular','EntypoSocial';
   font-weight: normal;
   font-size: 200%;
+  line-height: 50%;
+  padding-right:20px;
 }
