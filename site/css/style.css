@@ -11,6 +11,9 @@ a:active {
   color: inherit;
   text-decoration: none;
 }
+input:focus {
+  outline: 0;
+}
 
 footer {
   position: absolute;
