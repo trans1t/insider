@@ -12,11 +12,23 @@ a:active {
   text-decoration: none;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+footer #foot {
+  position: relative;
+  height: 100px;
+}
+
 footer #logo {
   position: absolute;
   text-align: center;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   font-size: 14pt;
 }
 
@@ -26,6 +38,7 @@ footer #links {
   width: 100%;
   bottom: 0;
   font-size: 14pt;
+  overflow: hidden;
 }
 footer #links a {
   padding-left: 10px;
@@ -69,6 +82,56 @@ footer #links a {
   padding: 15px;
 }
 
+#chat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+}
+
+#messages {
+  height: 95%;
+}
+
+#messages dl {
+  height: 100%;
+  width: 80%;
+  overflow: scroll;
+}
+
+#messages input {
+  border-radius: 0;
+  background-color: rgba(0,0,0,0);
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
+#chat .messages {
+  position: relative;
+}
+
+#chat .enable {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#chat input {
+  position: absolute;
+  top: 0;
+}
+
+#chat dt,#chat dd {
+  display: inline;
+  padding-right: 1px;
+}
+
+
 @font-face {
   font-family: 'EntypoRegular';
   src: url("font/entypo.eot");
@@ -76,6 +139,7 @@ footer #links a {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'EntypoSocial';
   src: url("font/entypo-social.eot");
@@ -83,6 +147,7 @@ footer #links a {
   font-weight: normal;
   font-style: normal;
 }
+
 .entypo {
   font-family: 'EntypoRegular','EntypoSocial';
   font-weight: normal;
