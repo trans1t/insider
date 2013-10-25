@@ -15,4 +15,8 @@
   ExpiresByType image/jpeg "access plus 120 minutes"
   ExpiresByType image/png "access plus 120 minutes"
   ExpiresByType text/css "access plus 60 minutes"
+  #ExpiresByType text/javascript "access plus 60 minutes"
+  #ExpiresByType application/javascript "access plus 60 minutes"
+  ExpiresByType font/opentype "access plus 1 month"
+  ExpiresByType application/x-font-woff "access plus 1 month"
 </IfModule>
