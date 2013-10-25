@@ -46,5 +46,5 @@ requirejs.config({
 require(['marionette','router','backstretch','app'],function(Marionette,Router,backstretch,app) {
   app.router = new Router();
   Backbone.history.start({pushState:true});
-  $('#main').backstretch('img/bg.png');
+  $('#main').backstretch('img/bg.jpg');
 });
