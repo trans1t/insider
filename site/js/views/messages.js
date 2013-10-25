@@ -10,7 +10,15 @@ define(['marionette','views/message','hbs!tpl/messages','app','socket'],
       'keydown #chatbox': 'chat',
       'click .enable': 'hide'
     },
+    onBeforeRender: function(e) {
+      app.prevmsg = $('#chatbox').val();
+    },
     onRender: function(e) {
+      if (app.prevmsg) {
+        $('#chatbox').val(app.prevmsg);
+        app.prevmsg = null;
+      }
+
       if(app.nickname) {
         $('#nickname').remove();
         $('#chatbox').focus();
