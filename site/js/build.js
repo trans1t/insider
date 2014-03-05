@@ -1,4 +1,4 @@
-({
+{
   baseUrl: ".",
   paths: {
     jquery: 'lib/jquery',
@@ -40,8 +40,8 @@
     }
   },
   hbs: {
-    disableI18n: true,
+    disableI18n: true
   },
   name: "main",
   out: "main.min.js"
-})
+}
