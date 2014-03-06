@@ -34,6 +34,8 @@ define([
       //get the current status
       socket.emit('status');
 
+
+      /*
       var messages = new Messages();
       var messagesView = new MessagesView({collection: messages}).render();
       socket.on('message',function(data) {
@@ -47,6 +49,7 @@ define([
         console.log(messages);
       });
       socket.emit('messages');
+      */
     },
 
     admin: function() {

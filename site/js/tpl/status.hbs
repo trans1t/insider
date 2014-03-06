@@ -1,10 +1,6 @@
 <h1 id="status">{{one}}</h3> 
 <h2 id="now-playing">{{two}}</h4>
 {{#if live}}
-<div id="audio">
-  <audio src="{{stream}}" data-src="{{stream}}" preload="none">
-    <a href="{{stream}}.m3u">Click here for stream, old browser user.</a>  
-  </audio>
-</div>
-<div id="play-control" class="btn btn-success entypo">&#9654;</div>
+<div id="player"></div>
+<div><p><a href="{{stream}}.m3u">{{stream}}.m3u</a></p></div>
 {{/if}}
