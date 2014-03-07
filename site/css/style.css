@@ -105,6 +105,7 @@ footer #links a {
   bottom: 0;
   width: 30%;
   background: rgba(255,255,255,0.6);
+  z-index:9999;
 }
 
 #messages {
