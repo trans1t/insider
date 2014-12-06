@@ -127,6 +127,10 @@ footer #links a {
   border: 0;
 }
 
+.header-bar {
+  background-color: black;
+}
+
 @font-face {
   font-family: 'EntypoRegular';
   src: url("font/entypo.eot");
@@ -150,4 +154,3 @@ footer #links a {
   line-height: 50%;
   padding-right:0px;
 }
-
