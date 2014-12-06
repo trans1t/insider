@@ -98,7 +98,7 @@ footer #links a {
   padding: 15px;
 }
 
-#chat {
+#insider-chat {
   position: absolute;
   top: 0;
   right: 0;
@@ -126,28 +126,6 @@ footer #links a {
   display: block;
   border: 0;
 }
-
-#chat .messages {
-  position: relative;
-}
-
-#chat .enable {
-  position: absolute;
-  bottom: 0;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-#chat input {
-  position: absolute;
-  top: 0;
-}
-
-#chat dt,#chat dd {
-  display: inline;
-  padding-right: 1px;
-}
-
 
 @font-face {
   font-family: 'EntypoRegular';
